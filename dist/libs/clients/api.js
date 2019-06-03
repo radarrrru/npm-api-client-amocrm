@@ -181,9 +181,7 @@ var AmoApiClient = function () {
       var _this4 = this;
 
       return new Promise(function (resolve, reject) {
-        _this4._promo.getAccountInfoBySubdomain(subdomain).then(function (info) {
-          return resolve('https://' + info.account_domain);
-        }, reject);
+        resolve('https://' + subdomain + '.amocrm.ru');
       });
     }
 

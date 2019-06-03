@@ -150,10 +150,7 @@ class AmoApiClient {
    */
   _resolveAccountAddress(subdomain) {
     return new Promise((resolve, reject) => {
-      this._promo.getAccountInfoBySubdomain(subdomain).then(
-        (info) => resolve(`https://${info.account_domain}`),
-        reject
-      );
+      resolve(`https://${subdomain}.amocrm.ru`);
     });
   }
 
